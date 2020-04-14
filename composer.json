@@ -1,0 +1,30 @@
+{
+	"name": "raditzfarhan/simple-jwt-auth",
+	"description": "Just a simple jwt auth for Laravel and Lumen",
+	"keywords": [ "laravel", "lumen", "jwt", "auth" ],
+	"type": "laravel-package",
+	"require": {
+		"firebase/php-jwt": "^5.2"
+	},
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Raditz Farhan",
+			"email": "raditzfarhan@gmail.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"autoload": {
+		"psr-4": {
+			"RaditzFarhan\\SimpleJWTAuth\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [ "RaditzFarhan\\SimpleJWTAuth\\JWTAuthServiceProvider" ]
+		},
+		"aliases": {
+			"JWTAuth": "RaditzFarhan\\SimpleJWTAuth\\Facade"
+		}
+	}
+}
