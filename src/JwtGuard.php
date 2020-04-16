@@ -87,6 +87,7 @@ class JwtGuard implements Guard
 
         if ($this->hasValidCredentials($user, $credentials)) {
             $this->setUser($user);
+
             return $remember ? $this->login($user) : true;
         }
 
@@ -118,7 +119,7 @@ class JwtGuard implements Guard
 
     /**
      * Generate token for current user.
-     *     
+     *
      * @return \RaditzFarhan\SimpleJWTAuth\JWTAuth
      */
     public function generateToken()
