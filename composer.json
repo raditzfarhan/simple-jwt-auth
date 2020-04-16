@@ -21,10 +21,10 @@
 	},
 	"extra": {
 		"laravel": {
-			"providers": [ "RaditzFarhan\\SimpleJWTAuth\\JWTAuthServiceProvider" ]
-		},
-		"aliases": {
-			"JWTAuth": "RaditzFarhan\\SimpleJWTAuth\\Facade"
+			"providers": [ "RaditzFarhan\\SimpleJWTAuth\\JWTAuthServiceProvider" ],
+			"aliases": {
+				"JWTAuth": "RaditzFarhan\\SimpleJWTAuth\\Facades\\JWTAuth"
+			}
 		}
 	}
 }
