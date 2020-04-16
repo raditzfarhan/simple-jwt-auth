@@ -57,10 +57,8 @@ class JwtGuard implements Guard
 
             if ($claims = $this->jwt->decode()) {
                 $id = $claims->sub;
-                $user = $this->provider->retrieveById($id);
-                $user->token = $token;
 
-                return $this->user = $user;
+                return $this->user = $this->provider->retrieveById($id);
             }
         }
     }
@@ -88,6 +86,7 @@ class JwtGuard implements Guard
         $user = $this->provider->retrieveByCredentials($credentials);
 
         if ($this->hasValidCredentials($user, $credentials)) {
+            $this->setUser($user);
             return $remember ? $this->login($user) : true;
         }
 
@@ -107,7 +106,7 @@ class JwtGuard implements Guard
     }
 
     /**
-     * Generate token by given id,.
+     * Generate token by given id.
      *
      * @param  int  $id
      * @return \RaditzFarhan\SimpleJWTAuth\JWTAuth
@@ -115,6 +114,16 @@ class JwtGuard implements Guard
     public function generateTokenById($id)
     {
         return $this->jwt->encode($id);
+    }
+
+    /**
+     * Generate token for current user.
+     *     
+     * @return \RaditzFarhan\SimpleJWTAuth\JWTAuth
+     */
+    public function generateToken()
+    {
+        return $this->jwt->encode($this->id());
     }
 
     /**
