@@ -7,7 +7,7 @@ use Firebase\JWT\JWT;
 class JWTAuth
 {
     /**
-     * Indicate the token string
+     * Indicate the token string.
      *
      * @var string
      */
@@ -57,8 +57,8 @@ class JWTAuth
     }
 
     /**
-     *  Set token
-     *    
+     *  Set token.
+     *
      * @param  mixed  $token
      */
     public function setToken($token)
@@ -67,8 +67,8 @@ class JWTAuth
     }
 
     /**
-     *  Get token
-     *    
+     *  Get token.
+     *
      * @return  mixed
      */
     public function getToken()
