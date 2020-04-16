@@ -7,7 +7,7 @@ use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Http\Request;
 
-class JWTGuard implements Guard
+class JwtGuard implements Guard
 {
     use GuardHelpers;
 
@@ -19,7 +19,7 @@ class JWTGuard implements Guard
     protected $jwt;
 
     /**
-     * The default input key for token
+     * The default input key for token.
      *
      * @var string
      */
@@ -110,7 +110,7 @@ class JWTGuard implements Guard
      * Generate token by given id,.
      *
      * @param  int  $id
-     * @return \RaditzFarhan\SimpleJWTAuth\JWTAuth 
+     * @return \RaditzFarhan\SimpleJWTAuth\JWTAuth
      */
     public function generateTokenById($id)
     {
