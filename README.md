@@ -1,7 +1,7 @@
 <p align="center"><img src="https://res.cloudinary.com/raditzfarhan/image/upload/v1587007679/simple-jwt-auth_gpo0vd.svg" width="640"></p>
 
 <p align="center">
-    <a href="https://github.com/raditzfarhan/simple-jwt-auth/releases"><img src="https://img.shields.io/github/v/release/raditzfarhan/simple-jwt-auth?style=flat-square" alt="Latest Version"></img></a>
+    <a href="https://github.com/raditzfarhan/simple-jwt-auth/releases"><img src="https://img.shields.io/packagist/v/raditzfarhan/simple-jwt-auth?style=flat-square" alt="Latest Version"></img></a>
     <a href="https://github.com/raditzfarhan/simple-jwt-auth"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License"></a>
     <a href="https://github.com/raditzfarhan/simple-jwt-auth"><img src="https://github.styleci.io/repos/7548986/shield?style=square" alt="styleci"></img></a>
 </p>
@@ -40,6 +40,9 @@ Then add users provider if you haven't:
     ],
 ],
 ```
+## Change log
+
+Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
 
 ## Credits
 
